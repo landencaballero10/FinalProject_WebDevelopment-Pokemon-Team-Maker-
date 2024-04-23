@@ -1,0 +1,73 @@
+:root 
+{
+    --Pokemon-Yellow-Color: #FBD743;
+    --Pokemon-Red-Col0degor: #FF1F1F;
+    --Pokemon-LightBlue-Color: #5DB9FF;
+    --Pokemon-DarkBlue-Color: #363B81;
+}
+
+body 
+{
+    margin: 0;
+    padding: 0;
+    display:flexbox;
+    max-height: 100vh;
+   
+    
+    background-color: var(--Pokemon-DarkBlue-Color);
+}
+
+@keyframes transformX {
+    from {background-position-x: 0;}
+    to {background-position-x: -40 ;}
+}
+
+/* @keyframes transformX{
+	from{background-position-y:(0)}
+	to{background-position-y: (10)}	
+} */
+
+.Xtransform_Background 
+{
+    
+    width: 100vw;
+    height: 100vh; 
+    background-image: url('../Pictures/Lightening\ Icon.png');
+    background-size: 12em;
+    animation: transformX 30s linear infinite;
+    position: absolute; 
+    z-index: -1;
+    
+}
+
+.Ytransform_Background
+{
+    animation: transformY 30s linear infinite;
+}
+/* .rotating_Background 
+{
+    animation:spin 15s linear infinite;
+    position: absolute;
+    z-index: -1;
+} */
+
+#GuestInputSection
+{
+    padding: -5em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    width: 30em;
+    height: 40em;
+    
+}
+
+#GuestInputSection > h1
+{
+    text-align: center;
+}
+
+#GuestInputSection > input
+{
+
+}
