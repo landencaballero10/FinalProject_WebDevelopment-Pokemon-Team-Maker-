@@ -1,26 +1,39 @@
 
-const pokemonApi = "pikachu";
-export const StorePokemonApi = () => {
+export const GetPokemonApi = async () => {
+    const kantoRegionURL = "https://pokeapi.co/api/v2/pokemon?limit=151=0";
+    
+    let pokemonResponse = await fetch(kantoRegionURL);
 
+    const pokemonApi = await pokemonResponse.json();
+
+    return pokemonApi;
 }
 
-export const GetStoredPokemonApi = () => {
-
+const apiKey = "pokemonApi";
+export const StorePokemonApi = (listofPokemon) => {
+    const listasJson = JSON.stringify(listofPokemon);
+    localStorage.setItem(apiKey, listasJson );
 }
 
+export const RecievePokemonApi = () => {
+    const JsonPokemon = localStorage.getItem(apiKey);
+    return JSON.parse(JsonPokemon);
+}
 
 const yourTeamKey = "yourTeam";
-export const StoreYourTeam = () => {
 
+export const StoreYourTeam = ( yourPokemonTeam ) => {
+    const yourTeamasJson = JSON.stringify(yourPokemonTeam);
+    localStorage.setItem(yourTeamKey, yourTeamasJson)
 }
 
-export const GetYourTeam = () => {
-
+export const RecieveYourTeam = () => {
+    const RecieveYourTeamJson = localStorage.getItem(yourTeamKey);
+    return JSON.parse(RecieveYourTeamJson);
 }
 
-export const GetPokemonApi = () => {
-    const kantoRegionURL = "https://pokeapi.co/api/v2/pokemon?limit=151=0";
+const guestNameKey = "GuestName";
 
-
+export const RecieveGuestName = () => {
+    return localStorage.getItem(guestNameKey);
 }
-
