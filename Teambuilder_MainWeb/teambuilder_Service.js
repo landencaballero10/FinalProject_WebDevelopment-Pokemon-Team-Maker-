@@ -37,3 +37,22 @@ const guestNameKey = "GuestName";
 export const RecieveGuestName = () => {
     return localStorage.getItem(guestNameKey);
 }
+
+export const GetSinglePokemonApi = async ( pokemon ) => {
+    const pokemonURL = pokemon.url;
+
+    var pokemonRecieve = await fetch(pokemonURL);
+
+    var pokemonList = await pokemonRecieve.json();
+    
+    return pokemonList;
+
+}
+
+const moreAboutPokemonKey = "PokeMonInfo";
+
+export const StoreInfoAboutPokemon = ( pokemon ) => {
+    const infoasJson = JSON.stringify(pokemon);
+    localStorage.setItem(moreAboutPokemonKey, infoasJson);
+}
+

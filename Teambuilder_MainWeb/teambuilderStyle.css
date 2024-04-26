@@ -2,14 +2,20 @@ body
 {
     margin: 0;
     display: flex;
-
+    
 }
 
 #yourTeam {
     background-color: yellow;
-    display: block;
+    
 }
 
 #findPokemon {
     background-color: red;
+    max-height: 100vw;
+}
+
+#findPokemon > article > div
+{
+    background-color: aqua;
 }

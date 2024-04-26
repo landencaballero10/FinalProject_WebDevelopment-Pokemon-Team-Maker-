@@ -16,9 +16,9 @@ const RenderPageGuestWeb = () => {
     const button_Element = document.createElement("button");
     button_Element.textContent = "Submit";
 
-    form_GuestInput.appendChild(button_Element);
     input_Element.Type = "text";
     form_GuestInput.appendChild(input_Element);
+    form_GuestInput.appendChild(button_Element);
     form_GuestInput.addEventListener("submit", (event) => {
         var guestName = input_Element.value;
             event.preventDefault();

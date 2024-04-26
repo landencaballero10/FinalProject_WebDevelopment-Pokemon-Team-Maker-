@@ -1,0 +1,39 @@
+body
+{
+    background-color: #F44444; 
+    max-height: 100dvh;
+    margin: 0;
+}
+
+#InfoContainer
+{
+    background-color: white;
+    display: flex;
+    max-height: 100dvh;
+    height: 100dvh;
+    margin-left: auto;
+    margin-right: 20dvw;
+    margin-left: 20dvw;
+    
+}
+
+figure > img {
+    height: 15em;
+    width: 15em;
+    margin-top: 2em;
+}
+
+figure {
+    max-width: 15em;
+    max-height: 20em;
+    background-color:beige;
+    padding: 0;
+    margin: 0;
+    margin-left: 1.5em;
+    margin-top: 10em;
+
+}
+
+section > article {
+    background-color: antiquewhite;
+}
