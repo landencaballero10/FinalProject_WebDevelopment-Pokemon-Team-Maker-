@@ -9,9 +9,9 @@ const pokemonAbilities = GetPokemonAbilities();
 // console.log(pokemonAbilities);
 
 const pokemonMoves = GetPokemonMoves();
-console.log(pokemonMoves)
 
 const pokemonName = GetPokemonName()
+
 
 const RenderInfoPage = () => {
     const section_PokemonInfo = document.getElementById("InfoContainer");

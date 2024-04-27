@@ -1,21 +1,134 @@
+:root 
+{
+    --Pokemon-Yellow-Color: #FBD743;
+    --Pokemon-Red-Col0degor: #FF1F1F;
+    --Pokemon-LightBlue-Color: #5DB9FF;
+    --Pokemon-DarkBlue-Color: #363B81;
+}
+
 body 
 {
     margin: 0;
     display: flex;
+    max-width: 100wh ;
+    max-height: 100vh;
+    background-color: var(--Pokemon-DarkBlue-Color);
     
 }
 
 #yourTeam {
-    background-color: yellow;
+    display: flex;
+    background-color: var(--Pokemon-Yellow-Color);
+    flex-direction: column;
+    width: 50vw;
+    min-height: 0;
+    overflow: auto;
     
 }
 
-#findPokemon {
-    background-color: red;
-    max-height: 100vw;
+#yourTeam > article {
+    background-color: white;
+}
+
+#findPokemon > article {
+    display: flex;
+    border-radius: 1em;
+    background-color: white;
+    height:80vh;
+    max-height: 100vh;
+    margin: auto;
+    overflow: auto;
+    flex-direction: column;
+    width: 30vw;
+    min-height: 0;
 }
 
 #findPokemon > article > div
 {
-    background-color: aqua;
+    background-color: rgb(231, 231, 231);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    width: 10em;
+} 
+
+
+/* #findPokemon > article > div > h2 {
+    text-align: center;
+    font-family: "Jersey 15";
+    font-size: 1.5em;
+} */
+
+#findPokemon {
+    display: flex;
+    background-color: var(--Pokemon-Yellow-Color);
+    flex-direction: column;
+    width: 50vw;
+    min-height: 0;
+    overflow: auto;
 }
+
+
+
+body > div {
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+
+
+}
+
+form {
+    background-color: #ffffff;
+    position: absolute;
+    padding-top: 1em;
+    padding-bottom: .5em;
+    width: 30%;
+    box-shadow: 0em .2em .4em #0000000c;
+    border-radius: 1em;
+}
+
+input {
+    height: 2em;
+    width: 20em;
+}
+
+
+button 
+{
+    background-image: url("../Pictures/search\ icon.png");
+    background-size: 2em;
+    height: 2em;
+    width: 2em;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    padding: .6em;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.268);
+    transition: ease-in;
+    border-radius: .5em;
+}
+
+@keyframes transformX {
+    from {background-position-x: 0em;}
+    to {background-position-x: -20em ;}
+}
+#Xtransform_Background {
+    width: 100vw;
+    height: 100vh; 
+    background-image: url('../Pictures/Pokeball\ icon.png');
+    background-size: 10em;
+    position: absolute; 
+    z-index: -1;
+    animation: transformX 30s linear infinite;
+}
+
+/* #yellow_background {
+    background-color: var(--Pokemon-Yellow-Color);
+    width: 100vw;
+    margin: 2em;
+    
+} */

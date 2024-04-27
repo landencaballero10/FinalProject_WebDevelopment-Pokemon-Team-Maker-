@@ -10,16 +10,14 @@ body
 {
     margin: 0;
     padding: 0;
-    display:flexbox;
-    max-height: 100vh;
-   
+    display: flex;
     
     background-color: var(--Pokemon-DarkBlue-Color);
 }
 
 @keyframes transformX {
-    from {background-position-x: 0;}
-    to {background-position-x: -40 ;}
+    from {background-position-x: 0em;}
+    to {background-position-x: -20em ;}
 }
 
 /* @keyframes transformX{
@@ -29,21 +27,19 @@ body
 
 .Xtransform_Background 
 {
-    
     width: 100vw;
     height: 100vh; 
-    background-image: url('../Pictures/Lightening\ Icon.png');
+    background-image: url('../Pictures/Lightening\ Icon_shadow.png');
     background-size: 12em;
-    animation: transformX 30s linear infinite;
     position: absolute; 
     z-index: -1;
-    
+    animation: transformX 30s linear infinite;
 }
 
-.Ytransform_Background
+/* .Ytransform_Background
 {
     animation: transformY 30s linear infinite;
-}
+} */
 /* .rotating_Background 
 {
     animation:spin 15s linear infinite;
@@ -51,23 +47,55 @@ body
     z-index: -1;
 } */
 
-#GuestInputSection
+ #GuestInputSection
 {
     padding: -5em;
     margin-left: auto;
     margin-right: auto;
-    background-color: #ffffff;
-    width: 30em;
-    height: 40em;
+    background-color: var(--Pokemon-Yellow-Color);
+    display: flex;
+    width: 50vw;
+    height: 100vh;
+    
+}
+#GuestInputSection > article
+{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35vw;
+    height: 100vh;
+
+}
+
+#GuestInputSection > article > h1
+{
+    text-align: center;
+    padding-top: 2em;
+    font-size: 3em;
+    font-family: "Jersey 15";
     
 }
 
-#GuestInputSection > h1
+#GuestInputSection > article > form
 {
-    text-align: center;
+    position:absolute;
+    left: 40%;    
 }
 
-#GuestInputSection > input
-{
+form > input {
+    width: 20em;
+    height: 2em;
+    background-color: var(--Pokemon-LightBlue-Color);
+    border: 0;
+    border-radius: .5em;
+}
 
+form > button {
+    height: 2em;
+    background-color: var(--Pokemon-DarkBlue-Color);
+    border: 0;
+    border-radius: .5em;
+    font-family: "Jersey 15";
+    color: white;
 }

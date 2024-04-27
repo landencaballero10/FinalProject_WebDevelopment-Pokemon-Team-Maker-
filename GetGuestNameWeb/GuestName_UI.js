@@ -5,9 +5,11 @@ const RenderPageGuestWeb = () => {
 
     formSection.replaceChildren();
 
+    const article_BackgroundYellow = document.createElement("article");
+
     const h1_AskForGuest = document.createElement("h1");
     h1_AskForGuest.textContent = `Hello, Guest! Please enter your name.`;
-    formSection.appendChild(h1_AskForGuest);
+    article_BackgroundYellow.appendChild(h1_AskForGuest);
 
     const form_GuestInput = document.createElement("form");
     
@@ -29,7 +31,8 @@ const RenderPageGuestWeb = () => {
     })
 
     
-    formSection.appendChild(form_GuestInput)
+    article_BackgroundYellow.appendChild(form_GuestInput);
+    formSection.appendChild(article_BackgroundYellow);
 
 }
 
