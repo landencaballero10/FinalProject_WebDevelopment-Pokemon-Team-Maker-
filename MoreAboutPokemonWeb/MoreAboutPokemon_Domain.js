@@ -60,9 +60,6 @@ export const GetPokemonSprite = () => {
     const sprites = [pokemonfront, pokemonBack];
 
     return sprites;
-    
-
-
 }
 
 export const GetPokemonName = () => {

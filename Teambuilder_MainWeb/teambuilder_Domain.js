@@ -1,4 +1,4 @@
-import { RecieveGuestName, GetPokemonApi, StorePokemonApi, RecievePokemonApi, StoreYourTeam, GetSinglePokemonApi, StoreInfoAboutPokemon  } from "./teambuilder_Service.js";
+import { RecieveGuestName, GetPokemonApi, StorePokemonApi, RecievePokemonApi, StoreYourTeam, GetSinglePokemonApi, StoreInfoAboutPokemon, RecieveYourTeam  } from "./teambuilder_Service.js";
 
 export const GetGuestName = () => {
     return RecieveGuestName();
@@ -22,17 +22,15 @@ export const updateList = ( newList ) => {
 }
 
 
-var yourteam;
-StoreYourTeam(yourteam);
+var yourteam = []
 
 export const GetYourPokemonTeam = () => {
-    if (yourteam != null) yourteam = RecieveYourTeam();
-    return yourteam;
+    return RecieveYourTeam();
 }
 
 export const UpdateYourPokemonTeam = ( newTeam ) => {
     yourteam = newTeam;
-    StoreYourTeam(yourteam);
+    StoreYourTeam(newTeam);
 }
 
 export const ReturnPokemonApi = async ( singlePokemon ) => {

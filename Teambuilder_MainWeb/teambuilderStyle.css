@@ -1,6 +1,6 @@
 :root 
 {
-    --Pokemon-Yellow-Color: #FBD743;
+    --Pokemon-Yellow-Color: #fbd643;
     --Pokemon-Red-Col0degor: #FF1F1F;
     --Pokemon-LightBlue-Color: #5DB9FF;
     --Pokemon-DarkBlue-Color: #363B81;
@@ -17,17 +17,22 @@ body
 }
 
 #yourTeam {
-    display: flex;
     background-color: var(--Pokemon-Yellow-Color);
-    flex-direction: column;
     width: 50vw;
-    min-height: 0;
-    overflow: auto;
-    
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+    margin-left: 5em;
+    margin-top: 3em;
 }
 
-#yourTeam > article {
-    background-color: white;
+#yourTeam > article{
+    height: 80vh;
+    width: 30vw;
+    background-color: #ffffff;
+    border-radius: 1em;
+    margin: auto;
+    overflow: auto;
 }
 
 #findPokemon > article {
@@ -43,6 +48,8 @@ body
     min-height: 0;
 }
 
+
+
 #findPokemon > article > div
 {
     background-color: rgb(231, 231, 231);
@@ -50,8 +57,19 @@ body
     display: flex;
     flex-direction: column;
     margin: 1em;
-    width: 10em;
+    width: 8em;
+    
+    
 } 
+
+#yourTeam > article > div {
+    background-color: rgb(231, 231, 231);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    width: 8em;
+}
 
 
 /* #findPokemon > article > div > h2 {
@@ -67,6 +85,9 @@ body
     width: 50vw;
     min-height: 0;
     overflow: auto;
+    margin-bottom: 3em;
+    margin-right: 5em;
+    margin-top: 3em;
 }
 
 
@@ -132,3 +153,6 @@ button:hover {
     margin: 2em;
     
 } */
+article > figure > img {
+    padding-bottom: 50em;
+}

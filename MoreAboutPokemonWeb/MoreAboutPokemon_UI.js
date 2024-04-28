@@ -27,15 +27,17 @@ const RenderInfoPage = () => {
     figure_imageContainer.appendChild(img_PokemonSprite);
     
     
-    const article_firstGroup = document.createElement("article");
-    const article_secondGroup = document.createElement("article");
+    const article_InfoGroup = document.createElement("article");
+    const article_PictureGroup = document.createElement("article");
 
-    const div_Type = document.createElement("div");
+    const div_pokeName = document.createElement("div")
     const h2_pokeName = document.createElement("h2");
     h2_pokeName.textContent = `Name: ${pokemonName}`;
+    div_pokeName.appendChild(h2_pokeName);
+
+    const div_Type = document.createElement("div");
     const p_Type = document.createElement("p");
     p_Type.textContent = `Type: ${pokemonType}`;
-    div_Type.appendChild(h2_pokeName);
     div_Type.appendChild(p_Type);
 
 
@@ -56,12 +58,23 @@ const RenderInfoPage = () => {
     p_abilities.textContent = `Abilities: ${pokemonAbilities}`;
     div_Abilities.appendChild(p_abilities);
     
-    article_firstGroup.appendChild(div_Type);
-    article_firstGroup.appendChild(div_Moves);
-    article_firstGroup.appendChild(div_Abilities);
+    article_InfoGroup.appendChild(div_pokeName)
+    article_InfoGroup.appendChild(div_Type);
+    article_InfoGroup.appendChild(div_Moves);
+    article_InfoGroup.appendChild(div_Abilities);
+    article_InfoGroup.id = "Information"
+    article_PictureGroup.appendChild(figure_imageContainer);
+    article_PictureGroup.id = "picture"
 
-    section_PokemonInfo.appendChild(figure_imageContainer);
-    section_PokemonInfo.appendChild(article_firstGroup);
+    const button_GoBackbutton = document.getElementById("goback");
+    button_GoBackbutton.textContent = "Go Back"
+    button_GoBackbutton.addEventListener("click", () => {
+        window.location.href = '../Teambuilder_MainWeb/teambuilder_Web.html';
+    })
+
+
+    section_PokemonInfo.appendChild(article_PictureGroup);
+    section_PokemonInfo.appendChild(article_InfoGroup);
 }
 
 RenderInfoPage()

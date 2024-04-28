@@ -3,6 +3,13 @@ body
     background-color: #F44444; 
     max-height: 100dvh;
     margin: 0;
+    width: 100vw;
+    height: 100vh; 
+    background-image: url('../Pictures/Pokeball\ icon.png');
+    background-size: 10em;
+    position: absolute; 
+    z-index: -1;
+    animation: transformX 30s linear infinite;
 }
 
 #InfoContainer
@@ -20,20 +27,65 @@ body
 figure > img {
     height: 15em;
     width: 15em;
-    margin-top: 2em;
+    
 }
 
 figure {
-    max-width: 15em;
-    max-height: 20em;
-    background-color:beige;
-    padding: 0;
-    margin: 0;
-    margin-left: 1.5em;
-    margin-top: 10em;
-
+    background-color: rgb(227, 161, 161);
+    margin-top: auto;
+    padding-bottom: em;
+    margin-bottom: auto;
 }
 
-section > article {
-    background-color: antiquewhite;
+@keyframes transformX {
+    from {background-position-x: 0em;}
+    to {background-position-x: -20em ;}
+}
+
+#Information {
+    margin-top: 5em;
+    margin-left: 5em;
+}
+
+#picture
+{
+    margin-top: 10em;
+    margin-left: 5em;
+}
+#picture > figure > img{
+    width: 15em;
+    height: 15em;
+}
+
+#InfoContainer > article > div {
+    margin-top: 2em;
+}
+
+div {
+    margin-bottom: 3em;
+}
+
+p {
+    font-family: "Jersey 25";
+    color: black;
+}
+
+li{
+    font-family: "Jersey 25";
+    color: black;
+}
+h2 {
+    font-family: "Jersey 15";
+    color: black;
+}
+button {
+    position: absolute;
+    left: 34%;
+    bottom: 38%;
+    color: white;
+    background-color: #ff4242;
+    width: 5em;
+    height: 2em;
+    font-family: "Jersey 15";
+    border-width: 0;
 }
