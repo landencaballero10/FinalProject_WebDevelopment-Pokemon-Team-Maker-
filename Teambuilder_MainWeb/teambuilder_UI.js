@@ -126,13 +126,13 @@ const RenderYourteam =  async ( team ) => {
         // console.log(yourTeamList)
         // console.log("Younr team:")
         // yourTeamList.forEach((pokemon) =>{
-        //     console.log(pokemon.name);
+        console.log(pokemon.name);
         // })
         UpdateYourPokemonTeam(yourTeamList);
 
         RemoveItemPokemonList(FilterPokemonList(pokemonName));
         UpdatePokemonList(pokemonList);
-        // console.log(pokemonList);
+        console.log(pokemonList);
 
         RenderPage(yourTeamList, pokemonList);
     })
