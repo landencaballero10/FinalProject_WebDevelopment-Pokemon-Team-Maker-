@@ -25,6 +25,7 @@ export const updateList = ( newList ) => {
 var yourteam = []
 
 export const GetYourPokemonTeam = () => {
+    console.log(RecieveYourTeam());
     return RecieveYourTeam();
 }
 

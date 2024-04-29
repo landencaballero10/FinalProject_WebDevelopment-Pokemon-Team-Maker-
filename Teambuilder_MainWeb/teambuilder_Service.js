@@ -29,6 +29,10 @@ export const StoreYourTeam = ( yourPokemonTeam ) => {
 
 export const RecieveYourTeam = () => {
     const RecieveYourTeamJson = localStorage.getItem(yourTeamKey);
+    if (RecieveYourTeamJson === null || RecieveYourTeamJson === "null")
+    {
+        return [];
+    }
     return JSON.parse(RecieveYourTeamJson);
 }
 
@@ -46,7 +50,6 @@ export const GetSinglePokemonApi = async ( pokemon ) => {
     var pokemonList = await pokemonRecieve.json();
     
     return pokemonList;
-
 }
 
 const moreAboutPokemonKey = "PokeMonInfo";
