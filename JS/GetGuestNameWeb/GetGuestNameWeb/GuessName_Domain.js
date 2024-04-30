@@ -1,4 +1,4 @@
-import { StoreGuessName, RecieveGuestName } from './GuessName_Service.js';
+import { StoreGuessName, RecieveGuestName } from '../GetGuestNameWeb/GuessName_Service.js';
 
 export const SetGuestName = (name) => {
     StoreGuessName(name);

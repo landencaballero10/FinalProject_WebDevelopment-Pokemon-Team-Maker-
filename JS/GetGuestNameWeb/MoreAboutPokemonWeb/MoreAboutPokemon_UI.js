@@ -1,4 +1,4 @@
-import { GetPokemonType, GetPokemonAbilities, GetPokemonMoves, GetPokemonSprite, GetPokemonName } from "./MoreAboutPokemon_Domain.js";
+import { GetPokemonType, GetPokemonAbilities, GetPokemonMoves, GetPokemonSprite, GetPokemonName } from "../MoreAboutPokemonWeb/MoreAboutPokemon_Domain.js";
 
 const pokemonSprites = GetPokemonSprite();
 

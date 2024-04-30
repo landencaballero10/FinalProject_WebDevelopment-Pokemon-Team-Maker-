@@ -1,4 +1,4 @@
-import { RecieveGuestName, GetPokemonApi, StorePokemonApi, RecievePokemonApi, StoreYourTeam, GetSinglePokemonApi, StoreInfoAboutPokemon, RecieveYourTeam  } from "./teambuilder_Service.js";
+import { RecieveGuestName, GetPokemonApi, StorePokemonApi, RecievePokemonApi, StoreYourTeam, GetSinglePokemonApi, StoreInfoAboutPokemon, RecieveYourTeam  } from "../Teambuilder_MainWeb/teambuilder_Service.js";
 
 export const GetGuestName = () => {
     return RecieveGuestName();

@@ -1,4 +1,4 @@
-import { RecievePokemonInfo } from "./MoreAboutPokemon_Service.js";
+import { RecievePokemonInfo } from "../MoreAboutPokemonWeb/MoreAboutPokemon_Service.js";
 
 var Pokemoninfo = RecievePokemonInfo()
 
