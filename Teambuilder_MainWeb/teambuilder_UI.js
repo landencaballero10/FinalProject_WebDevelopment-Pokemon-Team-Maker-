@@ -86,8 +86,8 @@ const RenderYourteam =  async ( team ) => {
         pokemonCantBeinTeam.forEach((item) => {
             const index = yourTeamList.indexOf(item)
             console.log(`Removing item at `, index)
+            
             yourTeamList.splice(index, 1);
-
             UpdateYourPokemonTeam( yourTeamList );
         })
 
@@ -126,12 +126,14 @@ const RenderYourteam =  async ( team ) => {
         // console.log(yourTeamList)
         // console.log("Younr team:")
         // yourTeamList.forEach((pokemon) =>{
-        console.log(pokemon.name);
+        console.log(pokemonName);
         // })
         UpdateYourPokemonTeam(yourTeamList);
 
         RemoveItemPokemonList(FilterPokemonList(pokemonName));
+        
         UpdatePokemonList(pokemonList);
+        
         console.log(pokemonList);
 
         RenderPage(yourTeamList, pokemonList);
@@ -155,10 +157,13 @@ const RenderKantoPokemon = ( kantoPokemon ) => {
         const pokemonName = event.dataTransfer.getData('text/plain')
         console.log(`transerferred pokemon ${pokemonName}`);
 
-        RemoveItemPokemonList(FilterYourTeamList(pokemonName));
         AddPokemonList(FilterYourTeamList(pokemonName));
+        RemoveItemYourList(FilterYourTeamList(pokemonName));
 
-        UpdatePokemonList(pokemonList);
+        UpdatePokemonList( pokemonList );
+        UpdateYourPokemonTeam( yourTeamList );
+
+        RenderPage(yourTeamList,pokemonList)
         
     })
 
@@ -168,23 +173,20 @@ const RenderKantoPokemon = ( kantoPokemon ) => {
 
     const button_Submit = document.createElement("button");
 
-    button_Submit.addEventListener("submit", (event) => {
+    input_Search.addEventListener("submit", (event) => {
         event.preventDefault();
-        // if (input_Search.value != null) {
-        //     kantoPokemon = copiedPokemonList;
-        // }
         console.log("Event has fired..")
         const searchedPokemon = pokemonList.filter((pokemon)=> {
-            return pokemon.name == input_Search.value.toLowerCase();
+            return pokemon.name.toLowerCase().includes(event.target.value.toLowerCase())
             
         })
         console.log(searchedPokemon);
 
-
-        RenderKantoPokemon(searchedPokemon);
+        if ( searchedPokemon === null ) RenderPage(yourTeamList, pokemonList)
+        else RenderPage(yourTeamList, searchedPokemon);
     })
 
-    form_SearchPokemon.appendChild(button_Submit);
+     form_SearchPokemon.appendChild(button_Submit);
     form_SearchPokemon.appendChild(input_Search);
 
     const article_Pokeboxes = document.createElement("article");
@@ -286,14 +288,14 @@ const IsPokemonInList = ( pokemon, list) => {
     if (findItem === pokemon) return true;
 }   
 
-const ItemRemovedYourTeam = ( item ) => {
-    if (!IsPokemonInList(item, yourTeamList))
-    {
-        const index = yourTeamList.indexOf(item);
+// const ItemRemovedYourTeam = ( item ) => {
+//     if (!IsPokemonInList(item, yourTeamList))
+//     {
+//         const index = yourTeamList.indexOf(item);
 
-    }
-    else console.log ("couldnt find item");
-}
+//     }
+//     else console.log ("couldnt find item");
+// }
 
 const AddItemTeam = ( pokemonInfo ) => {
     const newList = [...yourTeamList,pokemonInfo];
