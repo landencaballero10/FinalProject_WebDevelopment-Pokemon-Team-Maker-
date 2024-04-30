@@ -1,4 +1,4 @@
- import { GetGuestName, GetPokemonList, ReturnPokemonApi, StorePokemonInfo, updateList as UpdatePokemonList, UpdateYourPokemonTeam, GetYourPokemonTeam  } from "./teambuilder_Domain.js";
+ import { GetGuestName, GetPokemonList, ReturnPokemonApi, StorePokemonInfo, updateList as UpdatePokemonList, UpdateYourPokemonTeam, GetYourPokemonTeam  } from "../Teambuilder_MainWeb/teambuilder_Domain.js";
 
 var name = GetGuestName()
 
