@@ -1,4 +1,4 @@
-import { SetGuestName, GetGuestName } from '../Teambuilder_MainWeb/teambuilder_Domain.js';
+import { SetGuestName, GetGuestName } from '../GetGuestNameWeb/GuessName_Domain.js';
 
 const RenderPageGuestWeb = () => {
     const formSection = document.getElementById("GuestInputSection");
