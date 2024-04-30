@@ -18,7 +18,7 @@ console.log(yourTeamList);
 
 
 const RenderPage = ( yourTeam, kantoPokemon ) => {
-    
+    //Search n filter
     const div_container = document.getElementById("containerP");
     const form_SearchPokemon = document.createElement("form");
     
@@ -56,6 +56,7 @@ const RenderYourteam =  async ( team ) => {
     
     if (team != null) 
     {
+        //Build poke cards (Your Team)
         article_YourTeambox.replaceChildren();
          for (var index = 0; index < team.length; index++  )
         {
@@ -133,6 +134,8 @@ const RenderYourteam =  async ( team ) => {
     //         teamBox.appendChild(div_EmptyPokemonBox);
     //     }
     // }
+
+    //drag drop
 
     article_YourTeambox.addEventListener("dragover", (event)=> {
         event.preventDefault();
@@ -225,6 +228,8 @@ const BuildCard = ( pokemon ) => {
     // div_pokemonBox.appendChild(h1_imageCaption);
     div_pokemonBox.appendChild(image_PokemonImage);
     
+    //Drag 
+
     div_pokemonBox.addEventListener("dragstart", (event) => {
         event.dataTransfer.setData('text/plain', pokemon.name )
         console.log("dragStart transfer started");

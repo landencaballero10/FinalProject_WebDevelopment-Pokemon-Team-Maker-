@@ -27,7 +27,7 @@ export const updateList = ( newList ) => {
     StorePokemonApi(pokemonList)
 }
 
-
+//Teams
 var yourteam = []
 
 export const GetYourPokemonTeam = () => {
