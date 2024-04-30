@@ -240,7 +240,7 @@ const BuildCard = ( pokemon ) => {
     div_pokemonBox.addEventListener("dblclick", () => {
        console.log("double click has been activated")
        StorePokemonInfo(pokemon)
-        window.location.href = "./MoreAboutPokemon.html";
+        window.location.href = "../html/MoreAboutPokemon.html";
 
     })
 

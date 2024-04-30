@@ -69,7 +69,7 @@ const RenderInfoPage = () => {
     const button_GoBackbutton = document.getElementById("goback");
     button_GoBackbutton.textContent = "Go Back"
     button_GoBackbutton.addEventListener("click", () => {
-        window.location.href = './teambuilder_Web';
+        window.location.href = '../html/teambuilder.html';
     })
 
 

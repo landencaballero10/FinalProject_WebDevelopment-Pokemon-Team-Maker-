@@ -26,7 +26,7 @@ const RenderPageGuestWeb = () => {
             event.preventDefault();
             SetGuestName(guestName);
             console.log(GetGuestName());
-            window.location.href = "./teambuilder_Web";
+            window.location.href = "../html/teambuilder_Web.html";
             
     })
 
