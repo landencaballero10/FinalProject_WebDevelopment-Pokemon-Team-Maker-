@@ -18,6 +18,28 @@ console.log(yourTeamList);
 
 
 const RenderPage = ( yourTeam, kantoPokemon ) => {
+    
+    const div_container = document.getElementById("containerP");
+    const form_SearchPokemon = document.createElement("form");
+    
+    const input_Search = document.createElement("input");
+
+    
+    input_Search.addEventListener("input", ( event ) => {
+        event.preventDefault();
+
+        console.log("Event has fired..")
+        const searchedPokemon = pokemonList.filter( ( pokemon )=> {
+            return pokemon.name.toLowerCase().includes(event.target.value.toLowerCase())
+            
+        })
+        console.log("searched item", searchedPokemon);
+
+        RenderKantoPokemon(searchedPokemon);
+    })
+    div_container.appendChild(input_Search);
+    
+    
     RenderYourteam( yourTeam )
     RenderKantoPokemon( kantoPokemon )
 }
@@ -167,27 +189,9 @@ const RenderKantoPokemon = ( kantoPokemon ) => {
         
     })
 
-    const form_SearchPokemon = document.createElement("form");
-    
-    const input_Search = document.createElement("input");
 
-    const button_Submit = document.createElement("button");
 
-    input_Search.addEventListener("submit", (event) => {
-        event.preventDefault();
-        console.log("Event has fired..")
-        const searchedPokemon = pokemonList.filter((pokemon)=> {
-            return pokemon.name.toLowerCase().includes(event.target.value.toLowerCase())
-            
-        })
-        console.log(searchedPokemon);
-
-        if ( searchedPokemon === null ) RenderPage(yourTeamList, pokemonList)
-        else RenderPage(yourTeamList, searchedPokemon);
-    })
-
-     form_SearchPokemon.appendChild(button_Submit);
-    form_SearchPokemon.appendChild(input_Search);
+    //  form_SearchPokemon.appendChild(button_Submit);
 
     const article_Pokeboxes = document.createElement("article");
 
@@ -200,7 +204,7 @@ const RenderKantoPokemon = ( kantoPokemon ) => {
 
     })
 
-    article_Pokeboxes.appendChild(form_SearchPokemon);
+    // article_Pokeboxes.appendChild(form_SearchPokemon);
     section_PokemonBox.appendChild(article_Pokeboxes);
 
 }

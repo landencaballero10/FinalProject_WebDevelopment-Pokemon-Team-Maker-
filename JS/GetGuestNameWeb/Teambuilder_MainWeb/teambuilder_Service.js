@@ -6,13 +6,24 @@ export const GetPokemonApi = async () => {
 
     const pokemonApi = await pokemonResponse.json();
 
-    return pokemonApi;
+    return pokemonApi.results;
 }
 
 const apiKey = "pokemonApi";
 export const StorePokemonApi = (listofPokemon) => {
     const listasJson = JSON.stringify(listofPokemon);
     localStorage.setItem(apiKey, listasJson );
+}
+
+export const isLocalStorageAvailable = () => {
+    try {
+        localStorage.setItem(apiKey, "test");
+        localStorage.removeItem(apiKey);
+        return true;
+    }
+    catch(e) {
+        return false;
+    }
 }
 
 export const RecievePokemonApi = () => {

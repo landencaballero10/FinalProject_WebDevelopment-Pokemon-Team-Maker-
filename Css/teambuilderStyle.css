@@ -156,3 +156,10 @@ button:hover {
 article > figure > img {
     padding-bottom: 50em;
 }
+
+
+input {
+    position: absolute;
+    top: 10%;
+    left:59%
+}

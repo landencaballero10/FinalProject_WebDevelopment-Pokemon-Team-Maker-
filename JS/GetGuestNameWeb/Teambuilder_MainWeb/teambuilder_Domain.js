@@ -1,13 +1,19 @@
-import { RecieveGuestName, GetPokemonApi, StorePokemonApi, RecievePokemonApi, StoreYourTeam, GetSinglePokemonApi, StoreInfoAboutPokemon, RecieveYourTeam  } from "../Teambuilder_MainWeb/teambuilder_Service.js";
+import { RecieveGuestName, GetPokemonApi, StorePokemonApi, RecievePokemonApi, StoreYourTeam, GetSinglePokemonApi, StoreInfoAboutPokemon, RecieveYourTeam, isLocalStorageAvailable  } from "../Teambuilder_MainWeb/teambuilder_Service.js";
 
 export const GetGuestName = () => {
     return RecieveGuestName();
 }
+var pokemonOBJ ;
 
+if (isLocalStorageAvailable())
+{
+    pokemonOBJ = await GetPokemonApi();
 
-var pokemonOBJ = await GetPokemonApi();
+}
+// var pokemonOBJ ;
+    console.log(pokemonOBJ);
 
-var pokemonList = pokemonOBJ.results;
+var pokemonList = pokemonOBJ;
 
 StorePokemonApi(pokemonList);
 
