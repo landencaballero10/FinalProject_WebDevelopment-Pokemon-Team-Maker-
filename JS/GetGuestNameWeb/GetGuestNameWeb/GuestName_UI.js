@@ -1,4 +1,4 @@
-import { SetGuestName, GetGuestName } from './GuessName_Domain.js';
+import { SetGuestName, GetGuestName } from './GuessName_Domain';
 
 const RenderPageGuestWeb = () => {
     const formSection = document.getElementById("GuestInputSection");
@@ -26,7 +26,7 @@ const RenderPageGuestWeb = () => {
             event.preventDefault();
             SetGuestName(guestName);
             console.log(GetGuestName());
-            window.location.href = "../teambuilder_MainWeb/teambuilder_Web.html";
+            window.location.href = "./teambuilder_Web";
             
     })
 
